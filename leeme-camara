@@ -1,0 +1,22 @@
+dentro de V4L2-Webcam tenemos 2 binarios:
+
+wc3 = programa de webcam con resolucion genérica 
+(sdtv_mode=2 en /boot/config.txt y /DietPi/config.txt)
+
+wc4 = lo mismo pero para 240p 
+(sdtv_mode=16 en esos dos archivos)
+
+para configurar uno de los dos, cambiar la línea que hay en
+/etc/jwm/system.jwmrc
+
+hay que cambiar la configuración de vídeo 
+dependiendo de lo que se vaya a usar, y si se quiere cambiar la resolución
+de la cámara y de la ventana del programa, se debe editar wc.c
+en las lineas "pix" y "SDL_FULLSCREEN"
+(buscarlas con el nano)
+IMPORTANTE: para la tele de philips mierdosa hay que mantener
+framebuffer_width=640 y framebuffer_height=480 
+en /boot/config.txt y /DietPi/config.txt para que se vea a pantalla completa
+y en color
+
+es fácil en verda
